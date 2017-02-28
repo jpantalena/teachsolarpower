@@ -2,20 +2,17 @@
   'use strict'
 
   angular.module('app')
-    .component('main', {
+    .component('tsp', {
       templateUrl: '/app/public/js/app/app.template.html',
       controller: controller
     })
 
-  // controller.$inject = ['$http']
-
-  function controller($http) {
+  function controller() {
     const vm = this
 
     vm.$onInit = onInit
 
     function onInit() {
-      vm.addingPost = false
     }
   }
 

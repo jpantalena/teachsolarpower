@@ -1,0 +1,361 @@
+html {
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+
+/*NAV*/
+  nav, footer.page-footer {
+    background-color: #E8D99C;
+  }
+
+  /*TOP LEFT LOGO*/
+  nav .brand-logo {
+    padding-left: 1em;
+    font-family: 'Nixie One', cursive;
+    font-weight: 900;
+    color: black;
+    font-size: 3em;
+    position: relative;
+  }
+
+  @media only screen and (max-width: 992px) {
+    nav .brand-logo {
+      padding-left: 0;
+    }
+  }
+
+  nav .nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav {
+    height: 6em;
+  }
+
+  nav ul a {
+    font-family: 'Nixie One', cursive;
+    color: black;
+    font-weight: 900;
+    font-size: 1.2em;
+  }
+
+  .nav_right {
+    margin-right: 1em;
+  }
+
+/*MAIN*/
+
+/*BANNER*/
+
+  .banner_title {
+    color: white;
+    font-family: 'Nixie One', cursive;
+    text-align: center;
+  }
+
+  .animated_text {
+    margin-bottom: 1.5em;
+    color: white;
+    font-family: 'Nixie One', cursive;
+    text-align: center;
+  }
+
+  .button_div_banner {
+    display: flex;
+    justify-content: center;
+  }
+
+  #banner_button {
+    width: 20vw;
+    background-color: #6C8BBF;
+  }
+
+  #banner_button:hover {
+    background-color: #4F668C;
+  }
+
+/*CONTENT*/
+
+  main {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+  }
+
+  .main_box {
+    /*border: solid 1px black;*/
+    border-radius: 1em;
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .main_stuff {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4vh;
+  }
+
+  /*MAP*/
+
+  .state_feed {
+    /*centering state feed over map*/
+    padding-left: 1.3em;
+    font-family: 'Nixie One', cursive;
+  }
+
+  .input_map {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2em;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: -5px;
+  }
+
+  .wrapper:nth-child(even) {
+    margin-left: 3em;
+  }
+
+  .hexagon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3em;
+    height: 3em;
+    margin: 0.02em 0.1em;
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+
+  .state_abv {
+    font-family: 'Nixie One', cursive;
+    color: black;
+  }
+
+  .state {
+    background-color: #F2ACA1;
+  }
+
+  .state:hover {
+    z-index: 1;
+    transform: scale(1.5);
+    background-color: red;
+    cursor: pointer;
+  }
+
+  .state_selected {
+    font-size: 2em;
+  }
+
+  /*POPULAR CITIES*/
+  .button_city > a.btn {
+    margin: 0.5em;
+    background-color: #E8D99C;
+    color: black;
+  }
+
+  .button_city > a.btn:hover {
+    background-color: #FFE29F;
+  }
+
+
+  #location:focus {
+    border-bottom: 1px solid #E8D99C;
+    -webkit-box-shadow: 0 1px 0 0 #E8D99C;
+    -moz-box-shadow: 0 1px 0 0 #E8D99C;
+    box-shadow: 0 1px 0 0 #E8D99C;
+  }
+
+  .form_btns_cust {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .reset_button {
+    margin-left: 0.5em;
+  }
+
+  .submit_btns_cust {
+    background-color: #E8D99C;
+    color: black;
+  }
+
+  .submit_btns_cust:hover {
+    background-color: #FFE29F;
+  }
+
+  .space_below {
+    margin-bottom: 0.8em;
+  }
+
+  /*ROWS BACKGROUND*/
+  .cards_background {
+    background-color: #667EA5;
+  }
+
+  .card-content {
+    background-color: #fdfdfd;
+  }
+
+  .prod_table {
+    background-color: #fff;
+    margin: 0.5rem 0 1rem 0;
+  }
+
+  .prod_btn {
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #E8D99C;
+    margin-left: 1em;
+    color: black;
+  }
+
+  .prod_btn:hover {
+    background-color: #FFE29F;
+  }
+
+
+  td, th {
+    padding-left: 2em;
+  }
+
+  td {
+    padding-bottom: 0.3em;
+    padding-top: 0.3em;
+  }
+
+  .input_solar {
+    padding-top: 1em;
+    display: flex;
+  }
+
+  #city_loc {
+    margin: auto
+  }
+
+
+
+
+  .collapsible {
+    color: black;
+  }
+
+  .collapsible-body {
+    background-color: #eeeeee;
+  }
+
+  .lat, .long, .dni, .ghi, .lat_tilt {
+    padding: 1em;
+  }
+
+  .production {
+    display: inline-block;
+    margin-bottom: 1em;
+    margin-right: 0.8em;
+  }
+
+  .solar-prod-data {
+    display: none;
+  }
+
+
+
+  .center_info {
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .solar_card {
+    display: flex;
+  }
+
+  .solar_card_start {
+    margin-top: 2em;
+  }
+
+  #center {
+    margin: auto;
+  }
+
+
+
+  .utility_cost, .potential_status  {
+    font-size: 2em;
+    height: 3em;
+    align-items: center;
+  }
+
+  .space {
+    margin-top: 0.6em;
+  }
+
+  .hidden_select {
+    display: none;
+  }
+
+  .hidden_cards {
+    display: none;
+  }
+
+  .hidden_form {
+    display: none;
+  }
+
+  .hidden_or {
+    display: none;
+  }
+
+
+
+  .bill_value, .power_results {
+    font-size: 2em;
+    display: inline-block;
+  }
+
+  .power_results {
+    float:right;
+
+  }
+
+  /*FOOTER*/
+
+  footer.page-footer {
+    margin-top: 0;
+  }
+
+  .col > .footer_title {
+    color: black;
+    font-family: 'Nixie One', cursive;
+  }
+
+  .footer_sub {
+    color: black;
+  }
+
+  .bottom_line_div {
+    color: black;
+  }
+
+  .bottom_line {
+    margin: 0;
+  }
+
+  .about_header {
+    margin-top: 2em;
+  }
