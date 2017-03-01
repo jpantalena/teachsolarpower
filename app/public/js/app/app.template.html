@@ -1,45 +1,43 @@
 <!-- NAV -->
-<nav>
-  <div class="nav-wrapper">
-    <a href="index.html" class="brand-logo">Teach Solar Power</a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a class = "nav_right" href="about">About</a></li>
-    </ul>
-  </div>
-</nav>
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper">
+       <a href="/" class="brand-logo">Teach Solar Power</a>
+       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+       <ul class="right hide-on-med-and-down">
+         <li><a href="#">About</a></li>
+       </ul>
+       <ul class="side-nav" id="mobile-demo">
+         <li><a href="#">About</a></li>
+       </ul>
+     </div>
+  </nav>
+</div>
 
-<main>
   <!-- BANNER -->
-  <div class="valign-wrapper">
-    <img class="responsive-img" src="app/public/images/background.jpg">
-    <div class="main_box">
-      <h3 class="banner_title">A Solar Powered Future</h3>
-      <h5 class="animated_text"></h5>
-      <div class="button_div_banner">
-        <a id="banner_button" class="btn-large waves-effect waves-orange">Find Out!</a>
+  <div class="banner">
+    <div class="img-container">
+      <h3 class="banner_title">Search Now</h3>
+      <div class="banner_form">
+        <form>
+          <div class="row">
+            <div style="padding:0" class="input-field col s8 m8 l8 no_margin_top">
+              <input
+                placeholder="Enter your city"
+                id="banner_search"
+                type="text"
+                class="validate"
+                style="margin-bottom:0"
+                autofocus
+                 />
+            </div>
+            <div style="padding:0" class="col s4 m4 l4">
+              <button id="banner_search_btn" class="btn waves-effect waves-light" type="submit" name="action">Search</button>
+            </div>
+          </div>
+        </form>
       </div>
-    </div>
-  </div>
 
-</main>
-
-<!-- FOOTER -->
-<!-- <footer class="page-footer">
-  <div class="container">
-    <div class="row">
-      <div class="col l6 s12">
-        <h5 class="footer_title">Teach Solar Power</h5>
-        <p class="footer_sub">A web app powered to help your future solar investment.</p>
-      </div>
-      <div class="col l4 offset-l2 s12">
-
-      </div>
     </div>
+    <!-- <img class="banner_image" src="./app/public/images/background.jpg"> -->
   </div>
-  <div class="footer-copyright">
-    <div class="container center_info bottom_line_div">
-    <p class="bottom_line">© <span id="year_copy"></span> Teach Solar Power</p>
-    </div>
-  </div>
-</footer> -->
-<!-- FOOTER END -->

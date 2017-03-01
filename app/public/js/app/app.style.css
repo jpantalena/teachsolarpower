@@ -1,16 +1,16 @@
 /*NAV*/
   nav, footer.page-footer {
-    background-color: #E8D99C;
+    background-color: #fff;
+    /*box-shadow: 0 2px 4px -1px #999,
+      0 4px 5px 0 #999,
+      0 1px 10px 0 #999;*/
   }
 
   /*TOP LEFT LOGO*/
   nav .brand-logo {
     padding-left: 1em;
-    font-family: 'Nixie One', cursive;
-    font-weight: 900;
+    font-family: 'Julius Sans One', sans-serif;
     color: black;
-    font-size: 3em;
-    position: relative;
   }
 
   @media only screen and (max-width: 992px) {
@@ -19,20 +19,15 @@
     }
   }
 
-  nav .nav-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  nav {
-    height: 6em;
+  @media only screen and (max-width: 600px) {
+    nav .brand-logo {
+      font-size: 1.5rem;
+    }
   }
 
   nav ul a {
-    font-family: 'Nixie One', cursive;
+    font-family: 'Julius Sans One', sans-serif;
     color: black;
-    font-weight: 900;
     font-size: 1.2em;
   }
 
@@ -40,19 +35,80 @@
     margin-right: 1em;
   }
 
+  nav .button-collapse i {
+    color: black;
+  }
+
 
 /*BANNER*/
 
-  .banner_title {
-    color: white;
-    font-family: 'Nixie One', cursive;
-    text-align: center;
+.banner {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 64px);
+}
+
+.img-container {
+  min-height: calc(100vh - 64px);
+  background-image: url(https://pixabay.com/get/e83db8072df61c22d9584518a33219c8b66ae3d111b9154196f4c57c/tree-189852_1920.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
+  padding: 80px 20px 0 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .img-container, .banner {
+    min-height: calc(100vh - 56px);
   }
+
+}
+
+
+.banner_title {
+  color: black;
+  font-family: 'Julius Sans One', sans-serif;
+  text-align: center;
+}
+
+.banner_form {
+  max-width: 550px;
+  position: relative;
+  width: 100%;
+  margin: 3rem auto;
+}
+
+#banner_search {
+  background-color: #fff;
+  border-top: solid #bdbdbd 1px;
+  border-bottom: solid #bdbdbd 1px;
+  border-left: solid #bdbdbd 1px;
+  box-sizing: border-box;
+  border-radius: 3px 0 0 3px;
+  font-size: 16px;
+  padding: 0 10px;
+}
+
+#banner_search:focus {
+  border-bottom: solid #bdbdbd 1px;
+  box-shadow: 0 1px 0 0 #bdbdbd;
+}
+
+#banner_search_btn {
+  height: 3rem;
+  width: 100%;
+  background-color: #647db3;
+  box-shadow:none;
+  border-radius: 0 3px 3px 0;
+}
+
 
   .animated_text {
     margin-bottom: 1.5em;
     color: white;
-    font-family: 'Nixie One', cursive;
+    font-family: 'Julius Sans One', sans-serif;
+
     text-align: center;
   }
 

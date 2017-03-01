@@ -1,11 +1,25 @@
 html {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.no_margin_top {
+  margin-top: 0;
+}
+
+.no_padding {
+  padding: 0;
 }
 
 
@@ -19,16 +33,7 @@ body {
     flex: 1 0 auto;
   }
 
-  .main_box {
-    /*border: solid 1px black;*/
-    border-radius: 1em;
-    position: absolute;
-    width: 80%;
-    left: 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+
 
   .main_stuff {
     display: flex;
@@ -36,7 +41,7 @@ body {
     margin-top: 4vh;
   }
 
-  
+
 
   /*POPULAR CITIES*/
   .button_city > a.btn {
