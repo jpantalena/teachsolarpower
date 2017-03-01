@@ -50,17 +50,20 @@
 
 .img-container {
   min-height: calc(100vh - 64px);
-  background-image: url(https://pixabay.com/get/e83db8072df61c22d9584518a33219c8b66ae3d111b9154196f4c57c/tree-189852_1920.jpg);
+  background-image: url('../../../../app/public/images/tree-189852_1920.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  opacity: 0.8;
-  padding: 80px 20px 0 20px;
+  background-position: 20% 0%;
+  padding: 100px 20px 0 20px;
 }
 
 @media only screen and (max-width: 600px) {
   .img-container, .banner {
     min-height: calc(100vh - 56px);
+  }
+  .img-container {
+    padding: 40px 20px 0 20px;
+
   }
 
 }
@@ -76,7 +79,7 @@
   max-width: 550px;
   position: relative;
   width: 100%;
-  margin: 3rem auto;
+  margin: 2rem auto;
 }
 
 #banner_search {
@@ -88,11 +91,14 @@
   border-radius: 3px 0 0 3px;
   font-size: 16px;
   padding: 0 10px;
+  opacity: 1;
 }
 
 #banner_search:focus {
-  border-bottom: solid #bdbdbd 1px;
-  box-shadow: 0 1px 0 0 #bdbdbd;
+  border-bottom: solid #2196F3 1px;
+  border-top: solid #2196F3 1px;
+  border-left: solid #2196F3 1px;
+  box-shadow: none;
 }
 
 #banner_search_btn {
@@ -101,27 +107,11 @@
   background-color: #647db3;
   box-shadow:none;
   border-radius: 0 3px 3px 0;
+  opacity: 1;
 }
 
-
-  .animated_text {
-    margin-bottom: 1.5em;
-    color: white;
-    font-family: 'Julius Sans One', sans-serif;
-
-    text-align: center;
-  }
-
-  .button_div_banner {
-    display: flex;
-    justify-content: center;
-  }
-
-  #banner_button {
-    width: 20vw;
-    background-color: #6C8BBF;
-  }
-
-  #banner_button:hover {
-    background-color: #4F668C;
-  }
+.banner_sub_text {
+  font-size: 1.2rem;
+  text-align: center;
+  color: black;
+}
