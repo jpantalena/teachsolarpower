@@ -9,78 +9,7 @@ body {
 }
 
 
-/*NAV*/
-  nav, footer.page-footer {
-    background-color: #E8D99C;
-  }
 
-  /*TOP LEFT LOGO*/
-  nav .brand-logo {
-    padding-left: 1em;
-    font-family: 'Nixie One', cursive;
-    font-weight: 900;
-    color: black;
-    font-size: 3em;
-    position: relative;
-  }
-
-  @media only screen and (max-width: 992px) {
-    nav .brand-logo {
-      padding-left: 0;
-    }
-  }
-
-  nav .nav-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  nav {
-    height: 6em;
-  }
-
-  nav ul a {
-    font-family: 'Nixie One', cursive;
-    color: black;
-    font-weight: 900;
-    font-size: 1.2em;
-  }
-
-  .nav_right {
-    margin-right: 1em;
-  }
-
-/*MAIN*/
-
-/*BANNER*/
-
-  .banner_title {
-    color: white;
-    font-family: 'Nixie One', cursive;
-    text-align: center;
-  }
-
-  .animated_text {
-    margin-bottom: 1.5em;
-    color: white;
-    font-family: 'Nixie One', cursive;
-    text-align: center;
-  }
-
-  .button_div_banner {
-    display: flex;
-    justify-content: center;
-  }
-
-  #banner_button {
-    width: 20vw;
-    background-color: #6C8BBF;
-  }
-
-  #banner_button:hover {
-    background-color: #4F668C;
-  }
 
 /*CONTENT*/
 
