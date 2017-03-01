@@ -1,0 +1,53 @@
+/*MAP*/
+
+.state_feed {
+  font-family: 'Nixie One', cursive;
+  text-align: center;
+}
+
+.input_map {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2em;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: -5px;
+}
+
+.wrapper:nth-child(even) {
+  margin-left: 3em;
+}
+
+.hexagon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3em;
+  height: 3em;
+  margin: 0.02em 0.1em;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.state_abv {
+  font-family: 'Nixie One', cursive;
+  color: black;
+}
+
+.state {
+  background-color: #F2ACA1;
+}
+
+.state:hover {
+  z-index: 1;
+  transform: scale(1.5);
+  background-color: red;
+  cursor: pointer;
+}
+
+.state_selected {
+  font-size: 2em;
+}
