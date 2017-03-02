@@ -1,67 +1,17 @@
 <!-- CARD SECTION START -->
-<div class="main_stuff cards_background">
+<div class="cards_background">
 
   <!--CARDS-->
   <div class="container">
 
-    <!-- ROW 1 -->
-    <div class="row solar_card hidden_cards solar_card_start" id="user_data_solar">
-
-
-        <!-- OVERVIEW CARD -->
-        <div class="col s12 l4">
-          <div class="card hoverable">
-            <div class="card-content black-text">
-              <span class="card-title">Overview</span>
-              <ul class="collapsible solar_data_1" data-collapsible="expandable">
-
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- SOLAR POTENTIAL STATUS -->
-        <div class="col s12 l4">
-          <div class="card hoverable">
-            <div class="card-content black-text">
-              <div class="valign-wrapper">
-                <span class="card-title">Solar Potential</span>
-
-                <!-- tooltip -->
-                <a class="btn tooltipped prod_btn" data-position="top" data-delay="100" data-tooltip="Results based on local solar resource data">?</a>
-              </div>
-
-              <ul class="collapsible" data-collapsible="expandable">
-                <li>
-                  <div class="collapsible-header potential_status center_info">
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Cost of Electricity -->
-        <div class="col s12 l4">
-          <div class="card hoverable">
-            <div class="card-content black-text">
-              <div class="valign-wrapper">
-                <span class="card-title">Cost of Electricty</span>
-
-                <!-- tooltip on utility rates -->
-                <a class="btn tooltipped prod_btn" data-position="top" data-delay="100" data-tooltip="Based on avgerage residential pricing in your area">?</a>
-              </div>
-              <ul class="collapsible" data-collapsible="expandable">
-                <li>
-                  <div class="collapsible-header utility_cost center_info"></div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+    <!--OVERVIEW -->
+    <div class="row">
+      <div class="col s12">
+        <div>{{ $ctrl.dni }}</div>
+      </div>
     </div>
 
-    <!-- ROW 2 -->
+    <!-- ROW 1 -->
     <div class="row solar_card hidden_cards">
 
       <!--Electric Bill -->
@@ -89,7 +39,7 @@
       </div>
     </div>
 
-    <!-- ROW 3 -->
+    <!-- ROW 2 -->
     <div class="row solar_card hidden_cards">
 
       <!-- Monthly Solar Production Card/Table -->
@@ -181,6 +131,63 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- ROW 3 -->
+    <div class="row solar_card hidden_cards" >
+
+
+        <!-- OVERVIEW CARD -->
+        <div class="col s12 l4">
+          <div class="card hoverable">
+            <div class="card-content black-text">
+              <span class="card-title">Overview</span>
+              <ul class="collapsible solar_data_1" data-collapsible="expandable">
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- SOLAR POTENTIAL STATUS -->
+        <div class="col s12 l4">
+          <div class="card hoverable">
+            <div class="card-content black-text">
+              <div class="valign-wrapper">
+                <span class="card-title">Solar Potential</span>
+
+                <!-- tooltip -->
+                <a class="btn tooltipped prod_btn" data-position="top" data-delay="100" data-tooltip="Results based on local solar resource data">?</a>
+              </div>
+
+              <ul class="collapsible" data-collapsible="expandable">
+                <li>
+                  <div class="collapsible-header potential_status center_info">
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cost of Electricity -->
+        <div class="col s12 l4">
+          <div class="card hoverable">
+            <div class="card-content black-text">
+              <div class="valign-wrapper">
+                <span class="card-title">Cost of Electricty</span>
+
+                <!-- tooltip on utility rates -->
+                <a class="btn tooltipped prod_btn" data-position="top" data-delay="100" data-tooltip="Based on avgerage residential pricing in your area">?</a>
+              </div>
+              <ul class="collapsible" data-collapsible="expandable">
+                <li>
+                  <div class="collapsible-header utility_cost center_info"></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
     </div>
 
     <!-- ROW 4 -->

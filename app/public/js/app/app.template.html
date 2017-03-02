@@ -19,7 +19,7 @@
     <div class="img-container">
       <h3 class="banner_title">Are you ready for Solar</h3>
       <div class="banner_form">
-        <form name="$ctrl.postForm" novalidate>
+        <form name="$ctrl.postForm" novalidate ng-submit="$ctrl.search()">
           <div class="row">
             <div style="padding:0" class="input-field col s8 no_margin_top">
               <input
@@ -32,7 +32,7 @@
                 id="banner_search"
                 name="banner_search"
                 type="text"
-                ng-model="search"
+                ng-model="$ctrl.query.search"
                 style="margin-bottom: 0"
                 minlength="3"
                 ng-pattern="/[a-zA-Z]*.*\s*[a-zA-Z]*,\s[A-Z][A-Z]$/"
