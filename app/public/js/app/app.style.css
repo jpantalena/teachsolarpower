@@ -129,3 +129,13 @@ input.has-success:focus {
   text-align: center;
   color: black;
 }
+
+.input_message {
+  margin-top: 0.2rem;
+  /*height: 33px;*/
+  border-radius: 5px;
+  padding: 4px 10px;
+  background-color: #F0F7F1;
+  /*border: solid #F8664C 2px;*/
+  /*display: inline-block;*/
+}

@@ -12,8 +12,17 @@
 
     vm.$onInit = onInit
 
+
+
     function onInit() {
+      vm.length = 1;
     }
+
+    vm.lengthInput = function() {
+      console.log(vm.search);
+    }
+
+
   }
 
 }());

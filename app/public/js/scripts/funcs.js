@@ -283,7 +283,7 @@ function energy_incentives(lat, long) {
 // SCROLL DOWN AFTER LOCATION SUBMISSION
 function scroll_down() {
   $('html, body').animate({
-    scrollTop: $("#user_data_solar").offset().top
+    scrollTop: $(".cards_background").offset().top
   }, 2000);
 }
 
