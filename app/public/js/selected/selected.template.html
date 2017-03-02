@@ -5,11 +5,177 @@
   <div class="container">
 
     <!--OVERVIEW -->
-    <div class="row">
+    <div class="row" ng-if="$ctrl.show == 1">
       <div class="col s12">
-        <div>{{ $ctrl.dni }}</div>
+        <div class="card hoverable" style="margin-top: 2rem">
+          <div class="card-content black-text">
+            <div class="potential_status">{{ $ctrl.city }}, {{$ctrl.state}}</div>
+            <div class="potential_status">
+              <span ng-class="{
+              'favorable': $ctrl.status == 'Favorable',
+              'poor': $ctrl.status == 'Poor'
+            }">{{ $ctrl.status }}</span>
+            for Solar Power</div>
+          </div>
+        </div>
       </div>
+
+      <div class="col s12">
+        <div class="card hoverable" style="margin-top: 1rem">
+          <div class="card-content black-text">
+            <div class="potential_status">Cost of Electicity: {{ $ctrl.costStr }}</div>
+          </div>
+        </div>
+      </div>
+
+      <!--Electric Bill -->
+      <div class="col s12">
+        <div class="card hoverable">
+          <div class="card-content black-text">
+            <div class="valign-wrapper">
+              <span class="card-title">What's your avg electric bill</span>
+            </div>
+            <div class="bill_value">${{ $ctrl.bill.value }}</div>
+            <div ng-if="$ctrl.showPower == 1" class="power_results">{{ $ctrl.electric }}kWh</div>
+            <form action="#" id="bill">
+              <p class="range-field">
+                <input
+                  type="range"
+                  id="test5"
+                  min="0"
+                  max="150"
+                  ng-model="$ctrl.bill.value"
+                  ng-change="$ctrl.convert()"
+                />
+              </p>
+            </form>
+            <div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Monthly Solar Production Card/Table -->
+      <div class="col s12">
+        <div class="card hoverable">
+          <div class="card-content black-text">
+            <div class="valign-wrapper">
+              <span class="card-title">Solar Production</span>
+            </div>
+
+            <!-- solar production table -->
+            <table class="highlight bordered z-depth-2 prod_table">
+              <thead>
+                <tr>
+                    <th data-field="month">Month</th>
+                    <th data-field="power">Power (kWh)</th>
+                    <th data-field="cost">Electricity Value ($)</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr class="ac_row" ng-class="{
+                  'has-success': $ctrl.monthlyData[0] * $ctrl.cost > $ctrl.bill.value
+                }">
+                  <td>January</td>
+                  <td class="ac_prod">{{$ctrl.monthlyData[0] | number:2}}</td>
+                  <td class="ac_cost">{{ $ctrl.monthlyData[0] * $ctrl.cost | number:2 }}</td>
+                </tr>
+                <tr class="ac_row" ng-class="{
+                  'has-success': $ctrl.monthlyData[1] * $ctrl.cost > $ctrl.bill.value
+                }">
+                  <td>Febuary</td>
+                  <td class="ac_prod">{{$ctrl.monthlyData[1] | number:2}}</td>
+                  <td class="ac_cost">{{ $ctrl.monthlyData[1] * $ctrl.cost | number:2 }}</td>
+                </tr>
+                <tr class="ac_row" ng-class="{
+                  'has-success': $ctrl.monthlyData[2] * $ctrl.cost > $ctrl.bill.value
+                }">
+                  <td>March</td>
+                  <td class="ac_prod">{{$ctrl.monthlyData[2] | number:2}}</td>
+                  <td class="ac_cost">{{ $ctrl.monthlyData[2] * $ctrl.cost | number:2 }}</td>
+                </tr>
+                <tr class="ac_row" ng-class="{
+                  'has-success': $ctrl.monthlyData[3] * $ctrl.cost > $ctrl.bill.value
+                }">
+                  <td>April</td>
+                  <td class="ac_prod">{{$ctrl.monthlyData[3] | number:2}}</td>
+                  <td class="ac_cost">{{ $ctrl.monthlyData[3] * $ctrl.cost | number:2 }}</td>
+                </tr>
+                <tr class="ac_row" ng-class="{
+                  'has-success': $ctrl.monthlyData[4] * $ctrl.cost > $ctrl.bill.value
+                }">
+                  <td>May</td>
+                  <td class="ac_prod">{{$ctrl.monthlyData[4] | number:2}}</td>
+                  <td class="ac_cost">{{ $ctrl.monthlyData[4] * $ctrl.cost | number:2 }}</td>
+                </tr>
+                <tr class="ac_row" ng-class="{
+                  'has-success': $ctrl.monthlyData[5] * $ctrl.cost > $ctrl.bill.value
+                }">
+                  <td>June</td>
+                  <td class="ac_prod">{{$ctrl.monthlyData[5] | number:2}}</td>
+                  <td class="ac_cost">{{ $ctrl.monthlyData[5] * $ctrl.cost | number:2 }}</td>
+                </tr>
+                <tr class="ac_row" ng-class="{
+                  'has-success': $ctrl.monthlyData[6] * $ctrl.cost > $ctrl.bill.value
+                }">
+                  <td>July</td>
+                  <td class="ac_prod">{{$ctrl.monthlyData[6] | number:2}}</td>
+                  <td class="ac_cost">{{ $ctrl.monthlyData[6] * $ctrl.cost | number:2 }}</td>
+                </tr>
+                <tr class="ac_row" ng-class="{
+                  'has-success': $ctrl.monthlyData[7] * $ctrl.cost > $ctrl.bill.value
+                }">
+                  <td>August</td>
+                  <td class="ac_prod">{{$ctrl.monthlyData[7] | number:2}}</td>
+                  <td class="ac_cost">{{ $ctrl.monthlyData[7] * $ctrl.cost | number:2 }}</td>
+                </tr>
+                <tr class="ac_row" ng-class="{
+                  'has-success': $ctrl.monthlyData[8] * $ctrl.cost > $ctrl.bill.value
+                }">
+                  <td>September</td>
+                  <td class="ac_prod">{{$ctrl.monthlyData[8] | number:2}}</td>
+                  <td class="ac_cost">{{ $ctrl.monthlyData[8] * $ctrl.cost | number:2 }}</td>
+                </tr>
+                <tr class="ac_row" ng-class="{
+                  'has-success': $ctrl.monthlyData[9] * $ctrl.cost > $ctrl.bill.value
+                }">
+                  <td>October</td>
+                  <td class="ac_prod">{{$ctrl.monthlyData[9] | number:2}}</td>
+                  <td class="ac_cost">{{ $ctrl.monthlyData[9] * $ctrl.cost | number:2 }}</td>
+                </tr>
+                <tr class="ac_row" ng-class="{
+                  'has-success': $ctrl.monthlyData[10] * $ctrl.cost > $ctrl.bill.value
+                }">
+                  <td>November</td>
+                  <td class="ac_prod">{{$ctrl.monthlyData[10] | number:2}}</td>
+                  <td class="ac_cost">{{ $ctrl.monthlyData[10] * $ctrl.cost | number:2 }}</td>
+                </tr>
+                <tr class="ac_row" ng-class="{
+                  'has-success': $ctrl.monthlyData[11] * $ctrl.cost > $ctrl.bill.value
+                }">
+                  <td>December</td>
+                  <td class="ac_prod">{{$ctrl.monthlyData[11] | number:2}}</td>
+                  <td class="ac_cost">{{ $ctrl.monthlyData[11] * $ctrl.cost | number:2 }}</td>
+                </tr>
+              </tbody>
+            </table>
+            <sub>*Green rows indicate that an average residential solar power system meets your energy needs.</sub>
+          </div>
+        </div>
+      </div>
+
     </div>
+    <!-- END OF REDESIGN -->
+
+
+
+
+
+
+
+
 
     <!-- ROW 1 -->
     <div class="row solar_card hidden_cards">

@@ -166,7 +166,7 @@ body {
   }
 
 
-  .utility_cost, .potential_status  {
+  .utility_cost{
     font-size: 2em;
     height: 3em;
     align-items: center;

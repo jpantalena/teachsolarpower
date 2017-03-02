@@ -7,19 +7,14 @@
       controller: controller
     })
 
-  controller.$inject = ['$http']
-  function controller($http) {
+  controller.$inject = ['$http', 'postService']
+  function controller($http, postService) {
     const vm = this
 
     vm.$onInit = onInit
 
-
-
     function onInit() {
       vm.length = 1;
-      vm.dni = 0;
-      vm.ghi = 0;
-      vm.latTilt = 0;
     }
 
     vm.search = function(){
@@ -29,38 +24,12 @@
       var comma = location.indexOf(',');
       var city = location.slice(0, comma);
       var state = location.slice(comma + 2, location.length);
-      coordinates(city, state);
+      postService.coordinates(city, state);
     }
 
-     var coordinates = function(city, state) {
-      $http({
-        method: 'GET',
-        url: "https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyBecXcSD1TtOEr_uAXkjPsiqG8dRTsMsA0&address="+city+"+"+state
-      }).then(function(response) {
-        console.log("SUCCESS");
-        console.log(response);
-        var lat_cor = response.data.results[0].geometry.location.lat;
-        var lng_cor = response.data.results[0].geometry.location.lng;
-        solarData(lat_cor, lng_cor)
-      }, function(response) {
-        console.log("ERROR");
-        console.log(response);
-      });
-    }
 
-    var solarData = function(lat, lng) {
-      $http({
-        method: 'GET',
-        url: "https://developer.nrel.gov/api/solar/solar_resource/v1.json?api_key=ZJH76qOhbyarfoAWyLVAtsKgRcGm5bdna1qd7gjz&format=json&lat="+lat+"&lon="+lng
-      }).then(function(response) {
-        console.log("SUCCESS");
-        console.log(response);
-        vm.dni = 1;
-      }, function(response) {
-        console.log("ERROR");
-        console.log(response);
-      })
-    }
+
+
     // function getSolarData() {
     //   var lat_string = $(".lat").html();
     //   var lat_result = lat_string.substring(10, lat_string.length);

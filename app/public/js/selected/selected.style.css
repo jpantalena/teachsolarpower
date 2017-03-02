@@ -1,3 +1,17 @@
-.card_top_padding {
-  padding-top: 3rem;
+.potential_status {
+  font-size: 2em;
+  height: 2em;
+  align-items: center;
+}
+
+.has-success {
+  background-color:lightgreen;
+}
+
+.favorable {
+  color: green;
+}
+
+.poor {
+  color: red;
 }
