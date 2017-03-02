@@ -54,7 +54,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 20% 0%;
-  padding: 100px 20px 0 20px;
+  padding: 120px 20px 0 20px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -63,9 +63,7 @@
   }
   .img-container {
     padding: 40px 20px 0 20px;
-
   }
-
 }
 
 
@@ -99,6 +97,22 @@
   border-top: solid #2196F3 1px;
   border-left: solid #2196F3 1px;
   box-shadow: none;
+}
+
+input.has-error {
+  border: 1px solid #B7410E;
+}
+
+input.has-error:focus {
+  border: 1px solid #B7410E;
+}
+
+input.has-success {
+  background-color: green;
+}
+
+input.has-success:focus {
+  background-color: green;
 }
 
 #banner_search_btn {

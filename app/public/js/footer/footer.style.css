@@ -1,0 +1,26 @@
+/*FOOTER*/
+
+footer.page-footer {
+  margin-top: 0;
+}
+
+.col > .footer_title {
+  color: black;
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+.footer_sub {
+  color: black;
+}
+
+.bottom_line_div {
+  color: black;
+}
+
+.bottom_line {
+  margin: 0;
+}
+
+.about_header {
+  margin-top: 2em;
+}

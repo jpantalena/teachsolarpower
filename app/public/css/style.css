@@ -38,7 +38,6 @@ body {
   .main_stuff {
     display: flex;
     flex-direction: column;
-    margin-top: 4vh;
   }
 
 
@@ -212,31 +211,4 @@ body {
   .power_results {
     float:right;
 
-  }
-
-  /*FOOTER*/
-
-  footer.page-footer {
-    margin-top: 0;
-  }
-
-  .col > .footer_title {
-    color: black;
-    font-family: 'Nixie One', cursive;
-  }
-
-  .footer_sub {
-    color: black;
-  }
-
-  .bottom_line_div {
-    color: black;
-  }
-
-  .bottom_line {
-    margin: 0;
-  }
-
-  .about_header {
-    margin-top: 2em;
   }

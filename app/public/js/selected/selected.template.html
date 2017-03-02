@@ -1,25 +1,201 @@
-<!-- INPUT -->
-<div class="center_info">
-  <div class="hidden_form">
-    <div>OR</div>
-  </div>
-</div>
-<div class="row input_solar">
-  <div class="input-field col s6" id="city_loc">
-    <form class="hidden_form">
+<!-- CARD SECTION START -->
+<div class="main_stuff cards_background">
 
-      <!-- search box -->
-      <input placeholder="Search for a city" id="location" type="text" class="validate" autofocus>
-      <label class="active" for="first_name2"></label>
-      <div class="form_btns_cust">
-        <button class="btn waves-effect waves-light submit_btns_cust" type="submit" name="action">Submit
-          <i class="material-icons right">send</i>
-        </button>
-        <button class="btn waves-effect waves-light reset_button submit_btns_cust">Reset
-          <i class="material-icons right">loop</i>
-        </button>
+  <!--CARDS-->
+  <div class="container">
+
+    <!-- ROW 1 -->
+    <div class="row solar_card hidden_cards solar_card_start" id="user_data_solar">
+
+      <!-- OVERVIEW CARD -->
+      <div class="col s12 m4" id="center">
+        <div class="card hoverable">
+          <div class="card-content black-text">
+            <span class="card-title">Overview</span>
+            <ul class="collapsible solar_data_1" data-collapsible="expandable">
+
+            </ul>
+          </div>
+        </div>
       </div>
 
-    </form>
+      <!-- SOLAR POTENTIAL STATUS -->
+      <div class="col s12 m4" id="center">
+        <div class="card hoverable">
+          <div class="card-content black-text">
+            <div class="valign-wrapper">
+              <span class="card-title">Solar Potential</span>
+
+              <!-- tooltip -->
+              <a class="btn tooltipped prod_btn" data-position="top" data-delay="100" data-tooltip="Results based on local solar resource data">?</a>
+            </div>
+
+            <ul class="collapsible" data-collapsible="expandable">
+              <li>
+                <div class="collapsible-header potential_status center_info">
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cost of Electricity -->
+      <div class="col s12 m4" id="center">
+        <div class="card hoverable">
+          <div class="card-content black-text">
+            <div class="valign-wrapper">
+              <span class="card-title">Cost of Electricty</span>
+
+              <!-- tooltip on utility rates -->
+              <a class="btn tooltipped prod_btn" data-position="top" data-delay="100" data-tooltip="Based on avgerage residential pricing in your area">?</a>
+            </div>
+            <ul class="collapsible" data-collapsible="expandable">
+              <li>
+                <div class="collapsible-header utility_cost center_info"></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROW 2 -->
+    <div class="row solar_card hidden_cards">
+
+      <!--Electric Bill -->
+      <div class="col s12 m12" id="center">
+        <div class="card hoverable">
+          <div class="card-content black-text">
+            <div class="valign-wrapper">
+              <span class="card-title">What's your avg electric bill</span>
+
+              <!-- tooltip -->
+              <a class="btn tooltipped prod_btn" data-position="top" data-delay="100" data-tooltip="Adjust the slider to your average electricity bill and see how it compares to the average solar energy production of your selected area.">?</a>
+            </div>
+            <div class="bill_value"></div>
+            <div class="power_results"></div>
+            <form action="#" id="bill">
+              <p class="range-field">
+                <input type="range" id="test5" min="0" max="150" />
+              </p>
+            </form>
+            <div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROW 3 -->
+    <div class="row solar_card hidden_cards">
+
+      <!-- Monthly Solar Production Card/Table -->
+      <div class="col s12 m12" id="center">
+        <div class="card hoverable">
+          <div class="card-content black-text">
+            <div class="valign-wrapper">
+              <span class="card-title">Solar Production</span>
+              <!-- tooltip on avg system -->
+              <a class="btn tooltipped prod_btn" data-position="top" data-delay="100" data-tooltip="Based on average residential solar install of 5 kWh">?</a>
+            </div>
+            <div class="solar-prod-data">
+
+              <!-- solar production table -->
+              <table class="highlight bordered z-depth-2 prod_table">
+                <thead>
+                  <tr>
+                      <th data-field="month">Month</th>
+                      <th data-field="power">Power (kWh)</th>
+                      <th data-field="cost">Electricity Value ($)</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr class="ac_row">
+                    <td>January</td>
+                    <td class="ac_prod"></td>
+                    <td class="ac_cost"></td>
+                  </tr>
+                  <tr class="ac_row">
+                    <td>Febuary</td>
+                    <td class="ac_prod"></td>
+                    <td class="ac_cost"></td>
+                  </tr>
+                  <tr class="ac_row">
+                    <td>March</td>
+                    <td class="ac_prod"></td>
+                    <td class="ac_cost"></td>
+                  </tr>
+                  <tr class="ac_row">
+                    <td>April</td>
+                    <td class="ac_prod"></td>
+                    <td class="ac_cost"></td>
+                  </tr>
+                  <tr class="ac_row">
+                    <td>May</td>
+                    <td class="ac_prod"></td>
+                    <td class="ac_cost"></td>
+                  </tr>
+                  <tr class="ac_row">
+                    <td>June</td>
+                    <td class="ac_prod"></td>
+                    <td class="ac_cost"></td>
+                  </tr>
+                  <tr class="ac_row">
+                    <td>July</td>
+                    <td class="ac_prod"></td>
+                    <td class="ac_cost"></td>
+                  </tr>
+                  <tr class="ac_row">
+                    <td>August</td>
+                    <td class="ac_prod"></td>
+                    <td class="ac_cost"></td>
+                  </tr>
+                  <tr class="ac_row">
+                    <td>September</td>
+                    <td class="ac_prod"></td>
+                    <td class="ac_cost"></td>
+                  </tr>
+                  <tr class="ac_row">
+                    <td>October</td>
+                    <td class="ac_prod"></td>
+                    <td class="ac_cost"></td>
+                  </tr>
+                  <tr class="ac_row">
+                    <td>November</td>
+                    <td class="ac_prod"></td>
+                    <td class="ac_cost"></td>
+                  </tr>
+                  <tr class="ac_row">
+                    <td>December</td>
+                    <td class="ac_prod"></td>
+                    <td class="ac_cost"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <sub>*Green rows indicate that an average residential solar power system meets your energy needs.</sub>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROW 4 -->
+    <div class="row solar_card hidden_cards">
+
+      <!--Finanical Incentives-->
+      <div class="col s12 m12" id="center">
+        <div class="card hoverable">
+          <div class="card-content black-text">
+            <span class="card-title">Finanical Incentives</span>
+            <ul class="collapsible solar_data_3" data-collapsible="expandable">
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

@@ -19,20 +19,29 @@
     <div class="img-container">
       <h3 class="banner_title">Are you ready for Solar</h3>
       <div class="banner_form">
-        <form>
+        <form name="$ctrl.postForm" novalidate>
           <div class="row">
-            <div style="padding:0" class="input-field col s8 m8 l8 no_margin_top">
+            <div style="padding:0" class="input-field col s8 no_margin_top">
               <input
+                ng-class="{
+                  'has-success': $ctrl.postForm.banner_search.$valid,
+                  'has-error': $ctrl.postForm.banner_search.$invalid
+                }"
+                required
                 placeholder="Enter your city"
                 id="banner_search"
+                name="banner_search"
                 type="text"
-                class="validate"
-                style="margin-bottom:0"
+                ng-model="$ctrl.search.text"
+                style="margin-bottom: 0"
+                minlength="3"
+                ng-pattern=",\s[A-Z][A-Z]$"
                 autofocus
+                autocomplete="off"
                  />
             </div>
-            <div style="padding:0" class="col s4 m4 l4">
-              <button id="banner_search_btn" class="btn waves-effect waves-light" type="submit" name="action">Search</button>
+            <div style="padding:0" class="col s4">
+              <button ng-disabled="$ctrl.postForm.$invalid" id="banner_search_btn" class="btn waves-effect waves-light" type="submit" name="action">Search</button>
             </div>
           </div>
         </form>
@@ -41,5 +50,4 @@
         <div class="banner_sub_text">Search for your city to find out your potential for Solar Energy</div>
       </div>
     </div>
-    <!-- <img class="banner_image" src="./app/public/images/background.jpg"> -->
   </div>
