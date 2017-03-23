@@ -15,3 +15,8 @@
 .poor {
   color: red;
 }
+
+.top_cards {
+  margin-top: 2rem;
+  height: 250px;
+}

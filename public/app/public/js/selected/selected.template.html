@@ -1,29 +1,35 @@
 <!-- CARD SECTION START -->
-<div class="cards_background">
+<div id="selected_start" class="cards_background">
 
   <!--CARDS-->
   <div class="container">
 
     <!--OVERVIEW -->
     <div class="row" ng-if="$ctrl.show == 1">
-      <div class="col s12">
-        <div class="card hoverable" style="margin-top: 2rem">
+      <div class="col l6 s12">
+        <div class="card hoverable top_cards">
           <div class="card-content black-text">
-            <div class="potential_status">{{ $ctrl.city }}, {{$ctrl.state}}</div>
             <div class="potential_status">
+              <h4>{{ $ctrl.city }}, {{$ctrl.state}}</h4>
               <span ng-class="{
-              'favorable': $ctrl.status == 'Favorable',
-              'poor': $ctrl.status == 'Poor'
-            }">{{ $ctrl.status }}</span>
-            for Solar Power</div>
+                'favorable': $ctrl.status == 'Favorable',
+                'poor': $ctrl.status == 'Poor'
+                }">
+                {{ $ctrl.status }}
+              </span>
+              <h5>Solar Power Area</h5>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="col s12">
-        <div class="card hoverable" style="margin-top: 1rem">
+      <div class="col l6 s12">
+        <div class="card hoverable top_cards">
           <div class="card-content black-text">
-            <div class="potential_status">Cost of Electicity: {{ $ctrl.costStr }}</div>
+            <div class="potential_status">
+              <h4>Cost of Electricity :</h4>
+              <h5>{{ $ctrl.costStr }}</h5>
+            </div>
           </div>
         </div>
       </div>

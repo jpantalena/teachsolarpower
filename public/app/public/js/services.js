@@ -35,14 +35,10 @@
        method: 'GET',
        url: "https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyBecXcSD1TtOEr_uAXkjPsiqG8dRTsMsA0&address="+city+"+"+state
      }).then(function(response) {
-       console.log("SUCCESS");
-       console.log(response);
        self.lat = response.data.results[0].geometry.location.lat;
        self.lng = response.data.results[0].geometry.location.lng;
        self.solarData(self.lat, self.lng)
      }, function(response) {
-       console.log("ERROR");
-       console.log(response);
      });
    }
 
@@ -51,15 +47,11 @@
        method: 'GET',
        url: "https://developer.nrel.gov/api/solar/solar_resource/v1.json?api_key=ZJH76qOhbyarfoAWyLVAtsKgRcGm5bdna1qd7gjz&format=json&lat="+lat+"&lon="+lng
      }).then(function(response) {
-       console.log("SUCCESS");
-       console.log(response);
        self.dni = response.data.outputs.avg_dni.annual;
        self.ghi = response.data.outputs.avg_ghi.annual;
        self.lat_tilt = response.data.outputs.avg_lat_tilt.annual;
        self.solar_status(self.dni, self.ghi, self.lat_tilt)
      }, function(response) {
-       console.log("ERROR");
-       console.log(response);
      })
    }
 
@@ -82,8 +74,6 @@
         method: 'GET',
         url: "https://developer.nrel.gov/api/utility_rates/v3.json?api_key=ZJH76qOhbyarfoAWyLVAtsKgRcGm5bdna1qd7gjz&lat="+lat+"&lon="+long,
       }).then(function(response) {
-        console.log("SUCCESS");
-        console.log(response);
         var cost = response.data.outputs.residential;
         self.cost = cost;
         var cost_str = cost.toString();
@@ -92,8 +82,6 @@
         self.showPower = 0;
         self.getSolarProd(self.lat, self.lng, self.cost)
       }, function(response) {
-        console.log("ERROR");
-        console.log(response);
       })
     }
 
@@ -102,15 +90,11 @@
       var arr = $(".ac_prod");
       $http({
         method: 'GET',
-        url: "https://developer.nrel.gov/api/pvwatts/v5.json?api_key=ZJH76qOhbyarfoAWyLVAtsKgRcGm5bdna1qd7gjz&format=json&lat="+lat+"&lon="+long+"&system_capacity=6&module_type=1&losses=8&array_type=1&tilt=40&azimuth=180",
+        url: "https://developer.nrel.gov/api/pvwatts/v5.json?api_key=ZJH76qOhbyarfoAWyLVAtsKgRcGm5bdna1qd7gjz&format=json&lat="+lat+"&lon="+long+"&system_capacity=5&module_type=1&losses=8&array_type=1&tilt=40&azimuth=180",
       }).then(function(response) {
-        console.log("SUCCESS");
-        console.log(response);
         self.monthlyData = response.data.outputs.ac_monthly;
 
       }, function(response) {
-        console.log("ERROR");
-        console.log(response);
       })
     }
 
